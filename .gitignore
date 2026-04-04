@@ -1,0 +1,26 @@
+# System
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+.vscode/
+
+# Dependencies
+node_modules/
+
+# Build
+build/
+.publish/
+
+# Personal
+.favorites.json
+
+# Logs
+*.log
+
+# Design files
+*.psd
+*.ai
+*.pdf
+*.sublime*

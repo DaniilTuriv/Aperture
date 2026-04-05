@@ -1,1 +1,143 @@
 @use 'variables'as variables;
+
+.header {
+    background-color: variables.$bg-header;
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+    }
+
+    &__logo {
+        padding-top: 10px;
+        padding-bottom: 9px;
+        padding-left: 12px;
+    }
+
+    &__nav {
+        max-width: 700px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+
+        &.show {
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            top: 0;
+            left: 0;
+            max-width: 100%;
+            height: 100%;
+            background-color: variables.$bg-header;
+            padding: 72px 0 42px 20px;
+
+            .header__nav-list {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .header__nav-item {
+                transition: transform 0.3s ease;
+
+                &:active {
+                    transform: translateX(10px);
+                }
+            }
+        }
+        
+        &-list {
+            display: flex;
+            align-items: center;
+            gap: 32px;
+        }
+        
+        &-link {
+            display: inline-block;
+            color: variables.$primary-color;
+            font-size: 15px;
+            line-height: 1.33;
+            text-decoration: none;
+            position: relative;
+
+            &::after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 0;
+                height: 2px;
+                background-color: #FFB300;
+                transition: width 0.3s ease;
+            }
+
+            &:focus-visible {
+                outline: none;
+            }
+
+            &:hover::after,
+            &:focus-visible::after {
+                width: 100%;
+            }
+        }
+        
+        &-button {
+            max-width: 155px;
+            width: 100%;
+            background-color: variables.$primary-color;
+            color: variables.$bg-color;
+            border: 1px solid transparent;
+            border-radius: 14px;
+            font-size: 16px;
+            line-height: 1.25;
+            letter-spacing: 0.4px;
+            padding: 8px 20px 12px;
+            transition: color 0.3s ease, background-color 0.3s ease, border 0.3s ease, transform 0.1s ease;
+
+            &:hover,
+            &:focus-visible {
+                background-color: variables.$bg-color;
+                border-color: variables.$primary-color;
+                color: variables.$primary-color;
+            }
+
+            &:active {
+                transform: scale(0.97);
+            }
+        }
+    }
+
+    &__burger {
+        display: none;
+        flex-direction: column;
+        justify-content: space-between;
+        background-color: transparent;
+        border: none;
+        width: 36px;
+        height: 22px;
+
+        span {
+            width: 100%;
+            height: 2px;
+            background-color: variables.$primary-color;
+            border-radius: 15px;
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+
+        &.active {
+            span:nth-child(1) {
+                transform: rotate(45deg) translateY(14px);
+            }
+            span:nth-child(2) {
+                opacity: 0;
+            }
+            span:nth-child(3) {
+                transform: rotate(-45deg) translateY(-14px);
+            }
+        }
+    }
+}

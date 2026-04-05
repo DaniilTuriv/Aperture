@@ -1,5 +1,11 @@
 @use '../variables' as variables;
 
 @media screen and (max-width: 992px) {
+    .header__nav {
+        display: none;
+    }
     
+    .header__burger {
+        display: flex;
+    }
 }

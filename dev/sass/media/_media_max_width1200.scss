@@ -1,5 +1,13 @@
 @use '../variables' as variables;
 
 @media screen and (max-width: 1200px) {
-    
+    .services__grid-item {
+        .description {
+                display: -webkit-box;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 3;
+            }
+    }
 }

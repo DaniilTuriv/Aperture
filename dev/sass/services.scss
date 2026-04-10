@@ -1,2 +1,55 @@
 @use 'variables'as variables;
 
+.services {
+    padding-top: 120px;
+    margin-bottom: 100px;
+
+    .top-title {
+        margin-bottom: 10px;
+    }
+
+    &__grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+
+        &-item {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            height: 600px;
+            padding: 0 30px 30px 30px;
+            
+            .description {
+                display: -webkit-box;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 4;
+            }
+        }
+
+        &-item:nth-child(1) {
+            background: url(./assets/img/services-1.png) center / cover no-repeat;            
+        }
+
+        &-item:nth-child(2) {
+            background: url(./assets/img/services-2.png) center / cover no-repeat;            
+        }
+
+        &-item:nth-child(3) {
+            background: url(./assets/img/services-3.png) center / cover no-repeat;            
+        }
+
+        &-item:nth-child(4) {
+            background: url(./assets/img/services-4.png) center / cover no-repeat;            
+        }
+
+        &-button {
+            max-width: 143px;
+            font-size: 15px;
+            line-height: 1.33;
+        }
+    }
+}
+

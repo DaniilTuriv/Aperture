@@ -87,27 +87,9 @@
         
         &-button {
             max-width: 155px;
-            width: 100%;
-            background-color: variables.$primary-color;
-            color: variables.$bg-color;
-            border: 1px solid transparent;
-            border-radius: 14px;
             font-size: 16px;
             line-height: 1.25;
-            letter-spacing: 0.4px;
             padding: 8px 20px 12px;
-            transition: color 0.3s ease, background-color 0.3s ease, border 0.3s ease, transform 0.1s ease;
-
-            &:hover,
-            &:focus-visible {
-                background-color: variables.$bg-color;
-                border-color: variables.$primary-color;
-                color: variables.$primary-color;
-            }
-
-            &:active {
-                transform: scale(0.97);
-            }
         }
     }
 

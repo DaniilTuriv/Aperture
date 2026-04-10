@@ -15,6 +15,10 @@ html {
 
 body {
     font-family: "Poppins";
+    
+    section {
+        background-color: variables.$bg-color;
+    }
 }
 
 img,
@@ -50,12 +54,46 @@ footer {
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+.button {
+    position: relative;
+    width: 100%;
+    background-color: variables.$primary-color;
+    border: 1px solid transparent;
+    border-radius: 14px;
+    color: variables.$bg-color;
+    font-family: "Poppins";
+    letter-spacing: 0.4px;
+    padding: 8px 9px 12px 41px;
+    transition: color 0.3s ease, background-color 0.3s ease, border 0.3s ease, transform 0.1s ease;
+
+    &:hover,
+    &:focus-visible {
+        background-color: variables.$bg-color;
+        border-color: variables.$primary-color;
+        color: variables.$primary-color;
+    }
+
+    &:active {
+        transform: scale(0.98);
+    }
+}
+
+.button-icon {
+    position: absolute;
+    top: 4px;
+    left: 3px;
+    width: 32px;
+    height: 32px;
 }
 
 .text-wrapper {
     max-width: 600px;
     width: 100%;
-    margin: 0 auto 7px;
+    margin: 0 auto 40px;
     text-align: center;
 }
 
@@ -63,6 +101,7 @@ footer {
     color: variables.$primary-color;
     font-size: 40px;
     line-height: 1.05;
+    margin-bottom: 15px;
 
     &_sm { 
         font-size: 28px;
@@ -71,9 +110,11 @@ footer {
 }
 
 .section-subtitle {
-    color: variables.$primary-color;
+    color: variables.$secondary-color;
     font-size: 24px;
     line-height: 1.25;
+    padding-bottom: 2px;
+    margin-bottom: 40px;
 
     &_sm {
         font-size: 23px;
@@ -82,6 +123,7 @@ footer {
 }
 
 .top-title {
+    color: variables.$primary-color;
     letter-spacing: 2px;
 
     &_case {
@@ -89,20 +131,21 @@ footer {
     }
 }
 
-.description, .top-title {
+.description {
     color: variables.$secondary-color;
+    margin-bottom: 17px;
+}
+
+.description, .top-title {
     font-size: 14px;
     line-height: 1.42;
 }
-
-
 
 .wrapper-values {
     display: flex;
     justify-content: flex-end;
     gap: 16px;
-    padding-bottom: 40px;
-    padding-right: 12px;
+    margin-bottom: 40px;
 }
 
 .box-svg {

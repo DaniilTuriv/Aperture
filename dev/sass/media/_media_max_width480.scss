@@ -1,5 +1,16 @@
 @use '../variables' as variables;
 
 @media screen and (max-width: 480px) {
-    
+    .first-screen__title {
+        font-size: 38px;
+    }
+
+    .services__grid {
+        grid-template-columns: 1fr;
+        
+        &-item {
+            height: 500px;
+        }
+    }
+
 }

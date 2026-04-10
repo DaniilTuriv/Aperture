@@ -2,10 +2,18 @@
 
 @media screen and (max-width: 768px) {
     .first-screen__title {
-        font-size: 42px;
+        font-size: 46px;
     }
 
-    .description, .top-title {
-        font-size: 12px;
+    .section-title {
+        font-size: 38px;
+    }
+
+    .section-subtitle_sm {
+        font-size: 21px;
+    }
+
+    .services__grid {
+        grid-template-columns: 1fr;
     }
 }

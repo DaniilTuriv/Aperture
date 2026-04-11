@@ -8,3 +8,13 @@ burger.addEventListener('click', () => {
         document.body.classList.toggle('overflow-hidden')
     }
 })
+
+const servicesGridButtons = document.querySelectorAll('.services__grid-button')
+
+servicesGridButtons.forEach((item) => {
+    const itemAttr = item.getAttribute('data-trigger')
+    item.addEventListener('click', () => {
+        const info = document.getElementById(itemAttr)
+        info.classList.toggle('is-open')
+    })    
+})

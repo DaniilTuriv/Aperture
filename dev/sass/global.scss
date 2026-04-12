@@ -21,6 +21,11 @@ body {
     }
 }
 
+::selection {
+    background: #222;
+    color: #FFB300;
+}
+
 img,
 picture,
 video,

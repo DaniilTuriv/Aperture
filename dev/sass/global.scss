@@ -82,6 +82,18 @@ footer {
 
 .case {
     position: relative;
+    
+    &_fuji {
+        background: url(./assets/img/fuji.png) center / cover no-repeat;
+    }
+
+    &_monstera {
+        background: url(./assets/img/monstera.png) center / cover no-repeat;
+    }
+
+    &_himalayas {
+        background: url(./assets/img/himalayas.png) center / cover no-repeat;
+    }
 
     .wrapper-values {
         position: absolute;

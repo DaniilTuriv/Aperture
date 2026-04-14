@@ -80,8 +80,9 @@ footer {
     }
 }
 
-.case {
+.case, .tools {
     position: relative;
+    margin-bottom: -1px;
     
     &_fuji {
         background: url(./assets/img/fuji.png) center / cover no-repeat;
@@ -95,28 +96,23 @@ footer {
         background: url(./assets/img/himalayas.png) center / cover no-repeat;
     }
 
-    .wrapper-values {
-        position: absolute;
-        right: 40px;
-        bottom: 40px;
-        margin-bottom: 0;
-    }
 }
 
 .button {
+    align-self: flex-start;
     position: relative;
-    width: 100%;
     background-color: variables.$primary-color;
     border: 1px solid transparent;
     border-radius: 14px;
     color: variables.$bg-color;
+    font-size: 16px;
+    line-height: 1.25;
     font-family: "Poppins";
     letter-spacing: 0.4px;
     padding: 8px 9px 12px 41px;
     transition: color 0.3s ease, background-color 0.3s ease, border 0.3s ease, transform 0.1s ease;
 
-    &:hover,
-    &:focus-visible {
+    &:hover, &:focus-visible {
         background-color: variables.$bg-color;
         border-color: variables.$primary-color;
         color: variables.$primary-color;
@@ -151,6 +147,7 @@ footer {
     &_sm { 
         font-size: 28px;
         line-height: 1.14;
+        margin-bottom: 14px;
     }
 }
 
@@ -174,11 +171,20 @@ footer {
     &_case {
         color: variables.$primary-color;
     }
+
+    &_inverse {
+        color: variables.$secondary-color;
+    }
 }
 
 .description {
     color: variables.$secondary-color;
     margin-bottom: 17px;
+
+    &_inverse {
+        color: variables.$primary-color;
+        margin-bottom: 20px;
+    }
 }
 
 .description, .top-title {
@@ -187,10 +193,13 @@ footer {
 }
 
 .wrapper-values {
+    position: absolute;
+    right: 40px;
+    bottom: 40px;
     display: flex;
     justify-content: flex-end;
     gap: 16px;
-    margin-bottom: 40px;
+    margin-bottom: 0;
 }
 
 .box-svg {

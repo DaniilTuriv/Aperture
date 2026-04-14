@@ -9,7 +9,7 @@ burger.addEventListener('click', () => {
     }
 })
 
-const servicesGridButtons = document.querySelectorAll('.services__grid-button')
+const servicesGridButtons = document.querySelectorAll('#grid-button')
 
 servicesGridButtons.forEach((item) => {
     const itemAttr = item.getAttribute('data-trigger')

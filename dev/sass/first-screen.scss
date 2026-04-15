@@ -3,6 +3,10 @@
 .first-screen {
     background: url(./assets/img/first-screen.png) center / cover no-repeat;    
     padding: 456px 10px 57px;
+
+    .container {
+        position: relative;
+    }
     
     &__title {
         color: variables.$primary-color;
@@ -13,5 +17,9 @@
 
     .text-wrapper, .description {
         margin-bottom: 0;
+    }
+
+    .wrapper-values {
+        bottom: -33px;
     }
 }

@@ -1,9 +1,8 @@
 @use 'variables'as variables;
 
-.tools__img {
+.img-wrapper {
     max-width: 720px;
-    height: 540px;
-    object-fit: cover;
+    flex: 1 0 360px;
 }
 
 .container-tools {
@@ -17,6 +16,7 @@
         justify-content: center;
         padding: 60px 46px 40px 40px;
         text-align: start;
+        flex: 1 0 200px;
 
         .top-title {
             margin-bottom: 6px;

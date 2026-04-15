@@ -7,13 +7,25 @@
 
     .section-title {
         font-size: 38px;
+
+        &_sm {
+            font-size: 24px;
+        }
     }
 
     .section-subtitle_sm {
-        font-size: 21px;
+        font-size: 18px;
     }
 
     .services__grid {
         grid-template-columns: 1fr;
+    }
+
+    .tools {
+        background: url(./assets/img/tools.png) center / cover no-repeat;
+    }
+
+    .img-wrapper {
+        display: none;
     }
 }

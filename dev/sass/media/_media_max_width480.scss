@@ -1,9 +1,14 @@
 @use '../variables' as variables;
 
 @media screen and (max-width: 480px) {
-    .first-screen__title {
-        font-size: 38px;
+    .first-screen {
+        padding: 240px 10px 57px;
+        
+        &__title {
+            font-size: 38px;
+        }
     }
+    
 
     .services__grid {
         grid-template-columns: 1fr;

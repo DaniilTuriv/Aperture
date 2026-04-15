@@ -1,5 +1,18 @@
 @use '../variables' as variables;
 
 @media screen and (max-width: 1200px) {
+    .first-screen {
+        .wrapper-values {
+            bottom: 30px;
+        }
+    }
     
+    .container-tools {
+        gap: 0;
+
+        .text-wrapper {
+            padding: 24px 20px;
+            margin-bottom: 0;
+        }
+    }
 }

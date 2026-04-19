@@ -1,2 +1,40 @@
 @use 'variables'as variables;
 
+.clients {
+    padding-top: 120px;
+    padding-bottom: 100px;
+    margin-bottom: -1px;
+
+    &__svg {
+        width: 128px;
+
+        &_first {
+            height: 30px;
+        }
+
+        &_second {
+            height: 78px;
+        }
+
+        &_third {
+            height: 20px;
+        }
+
+        &_fourth {
+            height: 36px;
+        }
+
+        &_fifth {
+            height: 32px;
+        }
+    }
+
+    &__svg-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 40px;
+        padding: 40px 46px;
+    }
+}

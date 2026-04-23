@@ -9,7 +9,6 @@
         }
     }
     
-
     .services__grid {
         grid-template-columns: 1fr;
         
@@ -18,4 +17,15 @@
         }
     }
 
+    .footer__links {
+        justify-content: space-between;
+
+        &-box {
+            width: initial;
+        }
+    }
+
+    .footer__copyright {
+        align-items: initial;
+    }
 }

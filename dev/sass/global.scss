@@ -131,6 +131,37 @@ footer {
     height: 32px;
 }
 
+.link {
+    display: inline-block;
+    color: variables.$primary-color;
+    text-decoration: none;
+    position: relative;
+    transition: color 0.3s ease;
+
+    &:hover {
+        color: #FFB300CC;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background-color: #FFB300;
+        transition: width 0.3s ease;
+    }
+
+    &:focus-visible {
+        outline: none;
+    }
+
+    &:hover::after, &:focus-visible::after {
+        width: 100%;
+    }
+}
+
 .text-wrapper {
     max-width: 600px;
     width: 100%;
@@ -163,13 +194,14 @@ footer {
     }
 }
 
+.description, .top-title {
+    font-size: 14px;
+    line-height: 1.42;
+}
+
 .top-title {
     color: variables.$primary-color;
     letter-spacing: 2px;
-
-    &_case {
-        color: variables.$primary-color;
-    }
 
     &_inverse {
         color: variables.$secondary-color;
@@ -184,11 +216,12 @@ footer {
         color: variables.$primary-color;
         margin-bottom: 20px;
     }
-}
 
-.description, .top-title {
-    font-size: 14px;
-    line-height: 1.42;
+    &_sm {
+        font-size: 13px;
+        line-height: 1.53;
+        margin-bottom: 0;
+    }
 }
 
 .wrapper-values {

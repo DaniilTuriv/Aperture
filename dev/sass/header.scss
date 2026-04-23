@@ -58,32 +58,8 @@
         }
         
         &-link {
-            display: inline-block;
-            color: variables.$primary-color;
             font-size: 15px;
             line-height: 1.33;
-            text-decoration: none;
-            position: relative;
-
-            &::after {
-                content: '';
-                position: absolute;
-                bottom: 0;
-                left: 0;
-                width: 0;
-                height: 2px;
-                background-color: #FFB300;
-                transition: width 0.3s ease;
-            }
-
-            &:focus-visible {
-                outline: none;
-            }
-
-            &:hover::after,
-            &:focus-visible::after {
-                width: 100%;
-            }
         }
         
         &-button {

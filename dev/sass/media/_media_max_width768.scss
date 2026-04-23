@@ -39,4 +39,29 @@
         flex-direction: column;
         gap: 72px;
     }
+
+    .footer__content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer__newsletter {
+        flex-direction: column;
+
+        &-content {
+            align-items: center;
+        }
+    }
+
+    .footer__links {
+        justify-content: space-between;
+
+        &-box {
+            width: initial;
+        }
+    }
+
+    .footer__copyright {
+        flex-direction: column;
+    }
 }

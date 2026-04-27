@@ -70,6 +70,7 @@
 
         &-form {
             display: flex;
+            flex-direction: column;
             max-width: 458px;
             width: 100%;
             position: relative;
@@ -87,19 +88,29 @@
 
             &:hover {
                 border-color: transparent;
-                box-shadow: 0 0 0 1px #000000, 0 0 3px 2px rgba(255, 179, 0, 0.5);
+                box-shadow: 0 0 0 1.5px variables.$bg-color, 0 0 3px 3px #ffb30080;
             }
 
             &:focus-visible {
                 outline: none;
                 border-color: transparent;
-                box-shadow: 2px 2px 4px 2px #000000, 2px 2px 6px 4px rgba(255, 179, 0, 0.75)
+                box-shadow: 2px 2px 4px 2px variables.$bg-color, 2px 2px 6px 4px #ffb300bf
+            }
+
+            &.error {
+                border-color: transparent;
+                box-shadow: 2px 2px 4px 2px variables.$bg-color, 2px 2px 6px 4px #c62828bf;
+            }
+
+            &.valid {
+                border-color: transparent;
+                box-shadow: 2px 2px 4px 2px variables.$bg-color, 2px 2px 6px 4px #2e7d32bf;
             }
         }
 
         &-button {
             position: absolute;
-            top: 50%;
+            top: 11px;
             right: 6px;
             background-color: variables.$bg-color;
             border: transparent;
@@ -107,12 +118,30 @@
             max-width: 63px;
             width: 100%;
             height: 30px;
-            transform: translateY(-50%);
             transition: background-color 0.5s ease, border 0.5s ease;
 
             &:hover {
                 background-color: variables.$primary-color;
                 border: 2px solid variables.$bg-color;
+            }
+        }
+
+        &-message {
+            display: none;
+            position: absolute;
+            top: 58px;
+            font-size: 14px;
+            line-height: 1.42;
+            transition: color 0.3s ease;
+            
+            &.error {
+                display: block;
+                color: #c72929;
+            }
+
+            &.valid {
+                display: block;
+                color: #2E7D32;
             }
         }
     }

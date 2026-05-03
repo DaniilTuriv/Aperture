@@ -51,6 +51,35 @@ strong {
     font-weight: bold;
 }
 
+button, textarea {
+    font-family: "Poppins";
+}
+
+input {
+    font-family: "Poppins";
+
+    &:hover {
+        border-color: transparent;
+        box-shadow: 0 0 0 1.5px variables.$bg-color, 0 0 3px 3px #ffb30080;
+    }
+
+    &:focus-visible {
+        outline: none;
+        border-color: transparent;
+        box-shadow: 2px 2px 4px 2px variables.$bg-color, 2px 2px 6px 4px #ffb300bf
+    }
+
+    &.error {
+        border-color: transparent;
+        box-shadow: 2px 2px 4px 2px variables.$bg-color, 2px 2px 6px 4px #c62828bf;
+    }
+
+    &.valid {
+        border-color: transparent;
+        box-shadow: 2px 2px 4px 2px variables.$bg-color, 2px 2px 6px 4px #2e7d32bf;
+    }
+}
+
 footer {
     margin-top: auto;
 }
@@ -107,7 +136,6 @@ footer {
     color: variables.$bg-color;
     font-size: 16px;
     line-height: 1.25;
-    font-family: "Poppins";
     letter-spacing: 0.4px;
     padding: 8px 9px 12px 41px;
     transition: color 0.3s ease, background-color 0.3s ease, border 0.3s ease, transform 0.1s ease;

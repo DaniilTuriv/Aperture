@@ -82,30 +82,8 @@
             border: 1px solid #E5E7EB;
             border-radius: 12px;
             color: variables.$bg-color;
-            font-family: "Poppins";
             padding: 12.5px 12px;
             transition: box-shadow 0.3s ease;
-
-            &:hover {
-                border-color: transparent;
-                box-shadow: 0 0 0 1.5px variables.$bg-color, 0 0 3px 3px #ffb30080;
-            }
-
-            &:focus-visible {
-                outline: none;
-                border-color: transparent;
-                box-shadow: 2px 2px 4px 2px variables.$bg-color, 2px 2px 6px 4px #ffb300bf
-            }
-
-            &.error {
-                border-color: transparent;
-                box-shadow: 2px 2px 4px 2px variables.$bg-color, 2px 2px 6px 4px #c62828bf;
-            }
-
-            &.valid {
-                border-color: transparent;
-                box-shadow: 2px 2px 4px 2px variables.$bg-color, 2px 2px 6px 4px #2e7d32bf;
-            }
         }
 
         &-button {

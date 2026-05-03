@@ -19,41 +19,41 @@ servicesGridButtons.forEach((item) => {
     })    
 })
 
-const footerForm = document.querySelector('.footer__newsletter-form')
-const footerInput = document.querySelector('#footer-input')
-const footerButton = document.querySelector('#footer-button')
-const footerMessage = document.querySelector('.footer__newsletter-message')
+const form = document.querySelector('[data-form]')
+const formInput = document.querySelector('[data-form-input]')
+const formButton = document.querySelector('[data-form-button]')
+const formMessage = document.querySelector('[data-form-message]')
 const regex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 
-const footerEmailMessage = {
+const inputEmailMessage = {
     empty: 'Please enter your email address.',
     error: 'Please enter a valid email address.',
     valid: 'Thank you! Your email address is valid.'
 }
 
 const setMessage = (message, isValid) => {
-    footerInput.classList.toggle('valid', isValid)
-    footerInput.classList.toggle('error', !isValid)
-    footerMessage.classList.toggle('valid', isValid)
-    footerMessage.classList.toggle('error', !isValid)
-    footerMessage.textContent = message
+    formInput.classList.toggle('valid', isValid)
+    formInput.classList.toggle('error', !isValid)
+    formMessage.classList.toggle('valid', isValid)
+    formMessage.classList.toggle('error', !isValid)
+    formMessage.textContent = message
 }
 
-footerButton.addEventListener('click', () => {
-    const footerEmailValue = footerInput.value
+formButton.addEventListener('click', () => {
+    const formEmailValue = formInput.value
 
-    if (!footerEmailValue) {
-        setMessage(footerEmailMessage.empty, false)
+    if (!formEmailValue) {
+        setMessage(inputEmailMessage.empty, false)
     }
 
-    else if (!regex.test(footerEmailValue)) {
-        setMessage(footerEmailMessage.error, false)
+    else if (!regex.test(formEmailValue)) {
+        setMessage(inputEmailMessage.error, false)
     }
 
     else {
-        setMessage(footerEmailMessage.valid, true)
+        setMessage(inputEmailMessage.valid, true)
         setTimeout(() => {
-            footerForm.submit()      
+            form.submit()      
         }, 1000)
     }
 })

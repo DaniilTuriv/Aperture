@@ -126,8 +126,6 @@
     transition: transform 0.3s ease;
 
     &:hover {
-        transform: rotate(-180deg);
-
         span {
             background-color: #ffb300;
         }

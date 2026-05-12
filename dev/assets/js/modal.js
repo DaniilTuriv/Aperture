@@ -2,29 +2,28 @@ const modals = document.querySelectorAll('.modal')
 const openModal = document.querySelectorAll('[data-trigger-modal]')
 const closeButton = document.querySelectorAll('[data-close-modal]')
 
+const toggleModal = (modalId) => {
+    const modal = document.getElementById(modalId)
+    modal.classList.toggle('show')
+    document.body.classList.toggle('overflow-hidden')  
+}
+
 openModal.forEach(btn => {
     btn.addEventListener('click', () => {
-        const itemAttr = btn.getAttribute('data-trigger-modal')
-        const modal = document.getElementById(itemAttr)
-        modal.classList.toggle('show')
-        document.body.classList.toggle('overflow-hidden')           
+        toggleModal(btn.dataset.triggerModal)         
     })    
 })
 
 closeButton.forEach(btn => {
     btn.addEventListener('click', () => {
-        const itemAttr = btn.getAttribute('data-close-modal')
-        const modal = document.getElementById(itemAttr)
-        modal.classList.toggle('show')
-        document.body.classList.toggle('overflow-hidden')             
+        toggleModal(btn.dataset.closeModal)           
     })    
 })
 
 modals.forEach(modal => {
     modal.addEventListener('click', (event) => {
         if (event.target === modal) {
-            modal.classList.toggle('show')
-            document.body.classList.toggle('overflow-hidden')   
+            toggleModal(modal.id) 
         }
     })
 })

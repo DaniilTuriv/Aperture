@@ -5,12 +5,16 @@ const closeButton = document.querySelectorAll('[data-close-modal]')
 const toggleModal = (modalId) => {
     const modal = document.getElementById(modalId)
     modal.classList.toggle('show')
-    document.body.classList.toggle('overflow-hidden')  
+    if(nav.classList.contains('show'))  {
+        null
+    } else {
+        document.body.classList.toggle('overflow-hidden')
+    }
 }
 
 openModal.forEach(btn => {
     btn.addEventListener('click', () => {
-        toggleModal(btn.dataset.triggerModal)         
+        toggleModal(btn.dataset.triggerModal)
     })    
 })
 

@@ -51,13 +51,11 @@ strong {
     font-weight: bold;
 }
 
-button, textarea {
+button, textarea, input {
     font-family: "Poppins";
 }
 
 input {
-    font-family: "Poppins";
-
     &:hover {
         border-color: transparent;
         box-shadow: 0 0 0 1.5px variables.$bg-color, 0 0 3px 3px #ffb30080;

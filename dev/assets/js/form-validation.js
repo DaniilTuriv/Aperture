@@ -13,6 +13,11 @@ const formNameMessages = {
     valid: 'Thank you! Your name is valid.'
 }
 
+const formSelectMessages = {
+    empty: 'Please select an option.',
+    valid: 'Thank you! Your selection is valid.'
+}
+
 formButtons.forEach(btn => {
     btn.addEventListener('click', () => {
         const itemAttr = btn.getAttribute('data-form-button')
@@ -21,6 +26,8 @@ formButtons.forEach(btn => {
         const formEmailValue = formEmail.value.trim()
         const formName = document.querySelector(`[data-form-name="${itemAttr}"]`)
         const formNameMessage = document.querySelector(`[data-name-message="${itemAttr}"]`)
+        const formSelect = document.querySelector(`[data-select-trigger="${itemAttr}"]`)
+        const formSelectMessage = document.querySelector(`[data-select-message="${itemAttr}"]`)
 
         const setMessage = (input, messageEl, message, isValid) => {
             input.classList.toggle('valid', isValid)
@@ -32,6 +39,7 @@ formButtons.forEach(btn => {
 
         let isEmailValid = true
         let isNameValid = true
+        let isSelectValid = true
 
         if(formName) {
             const formNameValue = formName.value.trim()
@@ -51,6 +59,17 @@ formButtons.forEach(btn => {
             }
         }
 
+        if(formSelect) {
+            if(selectTrigger.textContent === 'Select an option') {
+                setMessage(formSelect, formSelectMessage, formSelectMessages.empty, false)
+                isSelectValid = false
+            }
+
+            else {
+                setMessage(formSelect, formSelectMessage, formSelectMessages.valid, true)
+            }
+        }
+
         if(!formEmailValue) {
             setMessage(formEmail, formEmailMessage, formEmailMessages.empty, false)
             isEmailValid = false
@@ -64,20 +83,30 @@ formButtons.forEach(btn => {
         else {
             setMessage(formEmail, formEmailMessage, formEmailMessages.valid, true)
             
-            if(formName) {
-                if(formName.classList.contains('valid')) {
+            if(formSelect) {
+                if(isEmailValid && isNameValid && isSelectValid) {
                     setTimeout(() => {
                         const form = document.querySelector(`[data-form="${itemAttr}"]`)    
                         form.submit()
                     }, 1000)
                 }
-            } else {
+            }
+
+            else if(formName) {
                 if(isEmailValid && isNameValid) {
                     setTimeout(() => {
                         const form = document.querySelector(`[data-form="${itemAttr}"]`)    
                         form.submit()
                     }, 1000)
                 }
+            }
+            
+            else {                
+                setTimeout(() => {
+                    const form = document.querySelector(`[data-form="${itemAttr}"]`)    
+                    form.submit()
+                }, 1000)
+                
             }
         }
     })
